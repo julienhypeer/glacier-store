@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Glacier Store | Conseils Thérapie par le Froid & Bien-être</title>
+    <meta name="description" content="Découvrez nos articles sur la thérapie par le froid, les bienfaits des bains glacés, conseils de récupération sportive et témoignages d'athlètes.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles-new.css">
+    <link rel="stylesheet" href="mobile-optimization.css">
+    <link rel="stylesheet" href="blog-styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SEO -->
+    <script src="seo-optimization.js" defer></script>
+    <script src="blog.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images site/images/logo.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://glacierstore.fr/blog.html">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="images site/images/logo_glacier3.png" alt="Glacialis by Glacier®" class="logo-image">
+                </a>
+            </div>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="produit.html" class="nav-link">Notre Produit</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="index.html#testimonials" class="nav-link">Témoignages</a>
+            </nav>
+            <div class="nav-right">
+                <a href="produit.html#commander" class="btn-primary-header">Commander</a>
+            </div>
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 class="blog-title">Le Blog du Froid Extrême</h1>
+            <p class="blog-subtitle">
+                Conseils d'experts, témoignages et actualités sur la thérapie par le froid
+            </p>
+
+            <!-- Categories -->
+            <div class="blog-categories">
+                <button class="category-btn active" data-category="all">Tous les articles</button>
+                <button class="category-btn" data-category="bienfaits">Bienfaits</button>
+                <button class="category-btn" data-category="guide">Guides pratiques</button>
+                <button class="category-btn" data-category="science">Science</button>
+                <button class="category-btn" data-category="temoignages">Témoignages</button>
+                <button class="category-btn" data-category="nutrition">Nutrition</button>
+            </div>
+
+            <!-- Search -->
+            <div class="blog-search">
+                <input type="search" placeholder="Rechercher un article..." class="search-input">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-image">
+                    <img src="images site/images/16752233196328030051.jpg" alt="Article vedette" loading="lazy">
+                    <span class="featured-badge">Article vedette</span>
+                </div>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="article-date">20 Janvier 2024</span>
+                        <span class="article-category">Science</span>
+                        <span class="article-read-time">8 min de lecture</span>
+                    </div>
+                    <h2 class="featured-title">
+                        Les 7 Protocoles Scientifiques du Bain Glacé pour Maximiser vos Résultats
+                    </h2>
+                    <p class="featured-excerpt">
+                        Découvrez les protocoles validés par la science pour optimiser votre pratique du bain glacé.
+                        De la température idéale au timing parfait, nous décryptons les dernières études pour vous.
+                    </p>
+                    <a href="articles/article-featured.html" class="btn-read-more">
+                        Lire l'article complet <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid" id="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card" data-category="guide">
+                    <div class="blog-card-image">
+                        <img src="images site/images/12236011082237918591.jpg" alt="Guide débutant" loading="lazy">
+                        <span class="article-category-badge">Guide</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">18 Janvier 2024</span>
+                            <span class="article-read-time">5 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            Guide Complet du Débutant : Votre Premier Bain Glacé
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Tout ce que vous devez savoir avant votre première immersion : préparation, durée, température et récupération.
+                        </p>
+                        <a href="articles/article-1.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-category="bienfaits">
+                    <div class="blog-card-image">
+                        <img src="images site/images/8590689156708531257.jpg" alt="Bienfaits mentaux" loading="lazy">
+                        <span class="article-category-badge">Bienfaits</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">15 Janvier 2024</span>
+                            <span class="article-read-time">6 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            Les Bienfaits Mentaux Insoupçonnés du Froid Extrême
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Au-delà de la récupération physique, découvrez comment le bain glacé transforme votre mental et votre résilience.
+                        </p>
+                        <a href="articles/article-2.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-category="temoignages">
+                    <div class="blog-card-image">
+                        <img src="images site/images/3441955843091463047.jpg" alt="Témoignage athlète" loading="lazy">
+                        <span class="article-category-badge">Témoignage</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">12 Janvier 2024</span>
+                            <span class="article-read-time">7 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            "Le Bain Glacé a Révolutionné ma Récupération" - Thomas, Ultramarathonien
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Retour d'expérience d'un athlète d'endurance sur 6 mois d'utilisation quotidienne du Glacialis.
+                        </p>
+                        <a href="articles/article-3.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card" data-category="science">
+                    <div class="blog-card-image">
+                        <img src="images site/images/18201107501351786863.jpg" alt="Science du froid" loading="lazy">
+                        <span class="article-category-badge">Science</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">10 Janvier 2024</span>
+                            <span class="article-read-time">10 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            La Science de l'Hormèse : Pourquoi le Stress du Froid Vous Rend Plus Fort
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Plongée dans les mécanismes biologiques qui font du bain glacé un outil de transformation physique.
+                        </p>
+                        <a href="articles/article-4.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card" data-category="nutrition">
+                    <div class="blog-card-image">
+                        <img src="images site/images/2274780807368754044.jpg" alt="Nutrition et froid" loading="lazy">
+                        <span class="article-category-badge">Nutrition</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">8 Janvier 2024</span>
+                            <span class="article-read-time">4 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            Nutrition et Bain Glacé : Le Duo Gagnant pour la Performance
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Les meilleurs aliments et le timing nutritionnel optimal pour maximiser les bénéfices du froid.
+                        </p>
+                        <a href="articles/article-5.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card" data-category="guide">
+                    <div class="blog-card-image">
+                        <img src="images site/images/9519088168339938170.jpg" alt="Maintenance" loading="lazy">
+                        <span class="article-category-badge">Guide</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="article-meta">
+                            <span class="article-date">5 Janvier 2024</span>
+                            <span class="article-read-time">3 min</span>
+                        </div>
+                        <h3 class="blog-card-title">
+                            Entretien de Votre Bain Glacé : Guide Pratique Mois par Mois
+                        </h3>
+                        <p class="blog-card-excerpt">
+                            Calendrier d'entretien et astuces pour garder votre équipement en parfait état toute l'année.
+                        </p>
+                        <a href="articles/article-6.html" class="blog-card-link">Lire la suite →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More -->
+            <div class="blog-load-more">
+                <button class="btn-load-more" id="load-more">
+                    Charger plus d'articles <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Restez au Frais avec Notre Newsletter</h2>
+                    <p class="newsletter-text">
+                        Recevez nos derniers articles, conseils exclusifs et offres spéciales directement dans votre boîte mail.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required class="newsletter-input">
+                        <button type="submit" class="btn-newsletter">S'inscrire</button>
+                    </form>
+                    <p class="newsletter-privacy">
+                        <i class="fas fa-lock"></i> Vos données sont sécurisées et ne seront jamais partagées
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images site/images/logo_glacier3.png" alt="Glacier" class="footer-logo">
+                    <p class="footer-description">
+                        Leader français des bains glacés premium pour athlètes et passionnés de bien-être.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Accueil</a>
+                        <a href="produit.html">Produit</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#testimonials">Témoignages</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <div class="footer-links">
+                        <a href="#">Guide d'utilisation</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Garantie</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p class="footer-contact">
+                        <i class="fas fa-envelope"></i> contact@glacier-store.fr<br>
+                        <i class="fas fa-phone"></i> +33 1 23 45 67 89<br>
+                        <i class="fas fa-clock"></i> Lun-Ven: 9h-18h
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Glacier Store. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-center').classList.toggle('active');
+        });
+    </script>
+
+    <!-- Shopping Cart System -->
+    <link rel="stylesheet" href="cart-styles.css">
+    <script src="cart.js"></script>
+
+</body>
+</html>

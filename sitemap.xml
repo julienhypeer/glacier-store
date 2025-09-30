@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://glacierstore.fr/</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://glacierstore.fr/images%20site/images/3441955843091463047.jpg</image:loc>
+            <image:title>Bain glacé premium Glacialis</image:title>
+            <image:caption>Bain glacé haut de gamme pour thérapie par le froid</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Page produit -->
+    <url>
+        <loc>https://glacierstore.fr/produit.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://glacierstore.fr/images%20site/images/bain-glace-ice.jpg</image:loc>
+            <image:title>Version ICE - Bain glacé 0°C</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://glacierstore.fr/images%20site/images/bain-glace-non-ice.jpg</image:loc>
+            <image:title>Version NON-ICE - Bain glacé 3°C+</image:title>
+        </image:image>
+    </url>
+
+    <!-- Page IceBarrel -->
+    <url>
+        <loc>https://glacierstore.fr/icebarrel.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog -->
+    <url>
+        <loc>https://glacierstore.fr/blog.html</loc>
+        <lastmod>2024-01-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

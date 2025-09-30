@@ -1,0 +1,225 @@
+/* Sélecteur de modèle de Chiller */
+.chiller-model-selector {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px 20px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.selector-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+}
+
+.selector-title h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.selector-title p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.model-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.model-card {
+    background: white;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.model-card.selected {
+    border-color: #4A90E2;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(74, 144, 226, 0.02) 100%);
+}
+
+.model-card.selected::before {
+    content: '✓';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: #4A90E2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.model-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.model-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.model-ice .model-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.model-premium .model-icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.model-info h4 {
+    font-size: 1.4rem;
+    color: #1e3c72;
+    margin-bottom: 5px;
+}
+
+.model-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag-pro {
+    background: #FFD700;
+    color: #333;
+}
+
+.tag-standard {
+    background: #4CAF50;
+    color: white;
+}
+
+.model-features {
+    margin-bottom: 20px;
+}
+
+.model-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.model-features li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+
+.model-features li i {
+    color: #4A90E2;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.model-features li strong {
+    color: #333;
+}
+
+.model-price {
+    border-top: 2px solid #f0f0f0;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-label {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+/* Section d'information dynamique */
+.dynamic-info-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: none;
+}
+
+.dynamic-info-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.info-item h5 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.info-item p {
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .model-options {
+        grid-template-columns: 1fr;
+    }
+
+    .model-price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-value {
+        margin-top: 10px;
+    }
+}

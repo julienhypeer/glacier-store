@@ -1,0 +1,728 @@
+/* Icetubs-inspired Product Selector Styles */
+
+/* Main container */
+.product-configurator {
+    padding: 60px 0;
+    background: white;
+}
+
+/* Selection sections */
+.selection-section {
+    margin-bottom: 60px;
+}
+
+.selection-title {
+    margin-bottom: 30px;
+}
+
+.selection-title h3 {
+    font-size: 1.8rem;
+    color: #1e3c72;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.selection-subtitle {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Options grid */
+.selection-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+}
+
+/* Option cards */
+.option-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.option-card.selected {
+    border-color: #4A90E2;
+    border-width: 3px;
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
+}
+
+/* Option image */
+.option-image {
+    width: 100%;
+    height: 220px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.option-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+/* Option content */
+.option-content {
+    padding: 20px;
+}
+
+.option-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 8px;
+}
+
+.option-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Option features */
+.option-features {
+    margin: 15px 0;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.option-features h5 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.option-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option-features li {
+    padding: 4px 0;
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.option-features li::before {
+    content: "✓";
+    color: #4A90E2;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Option price */
+.option-price {
+    padding: 15px 0 0;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-label {
+    color: #999;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1e3c72;
+}
+
+.price-amount.additional {
+    color: #4A90E2;
+}
+
+/* Badges */
+.option-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #333;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.option-badge.premium {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+}
+
+.option-badge.included {
+    background: linear-gradient(135deg, #4A90E2, #667eea);
+    color: white;
+}
+
+/* Selection indicator */
+.option-card.selected::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background: #4A90E2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.3s ease;
+}
+
+.option-card.selected::before {
+    content: '✓';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 15;
+    animation: scaleIn 0.3s ease;
+}
+
+/* Single option (for bathtub) */
+.single-option .option-card {
+    max-width: 500px;
+    pointer-events: none;
+    border-color: #4A90E2;
+    border-width: 3px;
+}
+
+/* Summary section */
+.configuration-summary {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.summary-title {
+    font-size: 1.6rem;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.summary-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.summary-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.summary-item-name {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.summary-item-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.summary-total {
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.summary-total-label {
+    color: #999;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.summary-total-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.summary-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Animations */
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selection-options {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+
+    .option-image {
+        height: 180px;
+    }
+
+    .price-amount {
+        font-size: 1.5rem;
+    }
+
+    .summary-total-amount {
+        font-size: 2rem;
+    }
+}
+
+/* Main Carousel Styles - Style Icetubs */
+.main-carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    border: 2px solid rgba(255,255,255,0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    width: 30px;
+    border-radius: 20px;
+    background: #4A90E2;
+    border-color: #4A90E2;
+}
+
+.carousel-dot:hover {
+    background: rgba(74, 144, 226, 0.7);
+}
+
+/* Badge on carousel */
+.main-carousel .badge-zero {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 15;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.main-carousel .badge-temp {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.main-carousel .badge-text {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Inline Feature Image for Repose-pieds */
+.feature-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.feature-with-image span {
+    flex: 1;
+}
+
+.inline-feature-image {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Toggle Switches Style - Inspiré d'Icetubs */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #4A90E2, #667eea);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+.toggle-option-card {
+    transition: all 0.3s ease;
+}
+
+.toggle-option-card:hover > div {
+    background: #f0f4f8 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Option Overlay Modal */
+.option-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.option-overlay.active {
+    opacity: 1;
+}
+
+.overlay-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 40px;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.overlay-close:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.overlay-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.overlay-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.overlay-details h3 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.overlay-details p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.overlay-features {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.overlay-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-features li {
+    padding: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.overlay-features li::before {
+    content: "✓";
+    color: #4A90E2;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.overlay-price {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #4A90E2, #667eea);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay-price strong {
+    font-size: 1.8rem;
+}
+
+/* Options Toggle Section - Prix Dynamique */
+.options-toggle-section .toggle-option-card.selected {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(102, 126, 234, 0.03));
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-carousel {
+        height: 400px;
+    }
+
+    .carousel-image {
+        padding: 20px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 45px;
+        height: 45px;
+        font-size: 2rem;
+    }
+
+    .carousel-prev {
+        left: 10px;
+    }
+
+    .carousel-next {
+        right: 10px;
+    }
+
+    .inline-feature-image {
+        width: 50px;
+        height: 35px;
+    }
+
+    .overlay-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toggle-options-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

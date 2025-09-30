@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceBarrel - Bain de Glace Premium | Brains Froids</title>
+    <meta name="description" content="Le bain de glace IceBarrel de Brains Froids. Conception premium pour une récupération optimale. Livraison gratuite en France.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="icebarrel-styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">BRAINS FROIDS</a>
+            </div>
+            <div class="nav-center">
+                <a href="icebarrel.html">IceBarrel</a>
+                <a href="index.html#benefits">Bénéfices</a>
+                <a href="index.html#science">Science</a>
+                <a href="index.html#about">À propos</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <button class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Left: Product Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <img id="mainImage" src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800" alt="IceBarrel Premium">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="thumbnail active" onclick="changeImage(this, 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800')">
+                            <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=150" alt="Vue 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=800')">
+                            <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=150" alt="Vue 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800')">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=150" alt="Vue 3">
+                        </div>
+                        <div class="thumbnail" onclick="changeImage(this, 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800')">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150" alt="Vue 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Info & Configuration -->
+                <div class="product-info">
+                    <h1 class="product-title">IceBarrel</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">5.0 (127 avis)</span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="price-label">Prix</span>
+                        <span class="price-amount">€6,675</span>
+                        <span class="price-vat">TVA incluse</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>L'IceBarrel est le summum du bain de glace premium. Conçu pour les athlètes et les passionnés de bien-être qui exigent le meilleur en matière de thérapie par le froid.</p>
+                    </div>
+
+                    <!-- Configuration Options -->
+                    <div class="product-options">
+                        <!-- Size Selection -->
+                        <div class="option-group">
+                            <label class="option-label">Taille</label>
+                            <div class="option-buttons">
+                                <button class="option-btn active" data-price="6675">
+                                    <span class="option-name">Standard</span>
+                                    <span class="option-price">€6,675</span>
+                                </button>
+                                <button class="option-btn" data-price="7425">
+                                    <span class="option-name">XL</span>
+                                    <span class="option-price">€7,425</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Accessories Selection -->
+                        <div class="option-group">
+                            <label class="option-label">Accessoires</label>
+                            <div class="option-buttons">
+                                <button class="option-btn active" data-price="0">
+                                    <span class="option-name">Sans</span>
+                                    <span class="option-price">€0</span>
+                                </button>
+                                <button class="option-btn" data-price="250">
+                                    <span class="option-name">Marches</span>
+                                    <span class="option-price">€250</span>
+                                </button>
+                                <button class="option-btn" data-price="350">
+                                    <span class="option-name">Escalier</span>
+                                    <span class="option-price">€350</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Add-ons -->
+                        <div class="option-group">
+                            <label class="option-label">Options supplémentaires</label>
+                            <div class="addons-list">
+                                <label class="addon-item">
+                                    <input type="checkbox" data-price="150">
+                                    <span class="addon-content">
+                                        <span class="addon-name">Plateau d'égouttage</span>
+                                        <span class="addon-price">+€150</span>
+                                    </span>
+                                </label>
+                                <label class="addon-item">
+                                    <input type="checkbox" data-price="1200">
+                                    <span class="addon-content">
+                                        <span class="addon-name">Système de chauffage</span>
+                                        <span class="addon-price">+€1,200</span>
+                                    </span>
+                                </label>
+                                <label class="addon-item">
+                                    <input type="checkbox" data-price="75">
+                                    <span class="addon-content">
+                                        <span class="addon-name">Support téléphone</span>
+                                        <span class="addon-price">+€75</span>
+                                    </span>
+                                </label>
+                                <label class="addon-item">
+                                    <input type="checkbox" data-price="450">
+                                    <span class="addon-content">
+                                        <span class="addon-name">Couvercle isolant</span>
+                                        <span class="addon-price">+€450</span>
+                                    </span>
+                                </label>
+                                <label class="addon-item">
+                                    <input type="checkbox" data-price="250">
+                                    <span class="addon-content">
+                                        <span class="addon-name">Kit de maintenance</span>
+                                        <span class="addon-price">+€250</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Quantity and Add to Cart -->
+                        <div class="purchase-section">
+                            <div class="quantity-section">
+                                <label class="option-label">Quantité</label>
+                                <div class="quantity-selector">
+                                    <button onclick="changeQuantity(-1)">-</button>
+                                    <input type="number" id="quantity" value="1" min="1">
+                                    <button onclick="changeQuantity(1)">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="total-price">
+                                <span class="total-label">Total</span>
+                                <span class="total-amount" id="totalPrice">€6,675</span>
+                            </div>
+
+                            <button class="btn-add-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Ajouter au panier
+                            </button>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Livraison gratuite en France</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Garantie 10 ans</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Installation professionnelle incluse</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>30 jours satisfait ou remboursé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Accordions -->
+            <div class="product-accordions">
+                <div class="accordion-item">
+                    <button class="accordion-header active" onclick="toggleAccordion(this)">
+                        <span>Spécifications</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content active">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Capacité</span>
+                                <span class="spec-value">500 litres</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Matériau</span>
+                                <span class="spec-value">Chêne premium certifié FSC</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Isolation</span>
+                                <span class="spec-value">Mousse haute densité 5cm</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Température</span>
+                                <span class="spec-value">3°C - 10°C</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Filtration</span>
+                                <span class="spec-value">Système UV + Ozone intégré</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Poids à vide</span>
+                                <span class="spec-value">120 kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Dimensions</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="dimensions-content">
+                            <h3>Standard</h3>
+                            <ul>
+                                <li>Diamètre extérieur : 150 cm</li>
+                                <li>Diamètre intérieur : 140 cm</li>
+                                <li>Hauteur : 105 cm</li>
+                                <li>Profondeur d'eau : 80 cm</li>
+                            </ul>
+                            <h3>XL</h3>
+                            <ul>
+                                <li>Diamètre extérieur : 180 cm</li>
+                                <li>Diamètre intérieur : 170 cm</li>
+                                <li>Hauteur : 110 cm</li>
+                                <li>Profondeur d'eau : 85 cm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Matériaux & Construction</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="materials-content">
+                            <p>L'IceBarrel est fabriqué à partir de chêne premium certifié FSC, sélectionné pour sa durabilité et sa résistance naturelle à l'eau. Chaque baril est assemblé à la main par nos artisans experts.</p>
+                            <ul>
+                                <li>Cerclage en acier inoxydable marine 316L</li>
+                                <li>Joints toriques en silicone alimentaire</li>
+                                <li>Traitement hydrofuge écologique</li>
+                                <li>Finition vernis marin UV résistant</li>
+                                <li>Base renforcée avec pieds antidérapants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>Livraison & Installation</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="delivery-content">
+                            <p>Livraison gratuite partout en France métropolitaine. Installation professionnelle incluse.</p>
+                            <ul>
+                                <li>Livraison sous 2-3 semaines</li>
+                                <li>Installation par nos techniciens certifiés</li>
+                                <li>Formation à l'utilisation incluse</li>
+                                <li>Kit de démarrage offert</li>
+                                <li>Support technique 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="faq-title">Pourquoi choisir un IceBarrel ?</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Récupération optimale</h3>
+                        <p>Accélérez votre récupération musculaire et réduisez l'inflammation grâce à la thérapie par le froid.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Design premium</h3>
+                        <p>Un design élégant qui s'intègre parfaitement dans votre espace bien-être ou votre jardin.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Durabilité exceptionnelle</h3>
+                        <p>Construit pour durer avec une garantie de 10 ans sur la structure.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Facilité d'utilisation</h3>
+                        <p>Système de filtration automatique et maintenance minimale requise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Brains Froids</h3>
+                    <p>L'excellence de la thérapie par le froid</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="#">IceBarrel</a></li>
+                        <li><a href="#">Accessoires</a></li>
+                        <li><a href="#">Entretien</a></li>
+                        <li><a href="#">Packs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Guide d'utilisation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Garantie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé de nos offres exclusives</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Brains Froids. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Change main image
+        function changeImage(thumb, src) {
+            document.getElementById('mainImage').src = src;
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        // Toggle accordion
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const isActive = header.classList.contains('active');
+            
+            // Close all accordions
+            document.querySelectorAll('.accordion-header').forEach(h => {
+                h.classList.remove('active');
+                h.nextElementSibling.classList.remove('active');
+            });
+            
+            // Open clicked accordion if it wasn't active
+            if (!isActive) {
+                header.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        // Price calculation
+        let basePrice = 6675;
+        let accessoryPrice = 0;
+        let addonsPrice = 0;
+
+        // Size selection
+        document.querySelectorAll('.option-group:first-child .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.option-group:first-child .option-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                basePrice = parseInt(this.dataset.price);
+                updateTotalPrice();
+            });
+        });
+
+        // Accessory selection
+        document.querySelectorAll('.option-group:nth-child(2) .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.option-group:nth-child(2) .option-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                accessoryPrice = parseInt(this.dataset.price);
+                updateTotalPrice();
+            });
+        });
+
+        // Add-ons selection
+        document.querySelectorAll('.addon-item input').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                addonsPrice = 0;
+                document.querySelectorAll('.addon-item input:checked').forEach(checked => {
+                    addonsPrice += parseInt(checked.dataset.price);
+                });
+                updateTotalPrice();
+            });
+        });
+
+        // Quantity change
+        function changeQuantity(delta) {
+            const input = document.getElementById('quantity');
+            const newValue = Math.max(1, parseInt(input.value) + delta);
+            input.value = newValue;
+            updateTotalPrice();
+        }
+
+        document.getElementById('quantity').addEventListener('input', updateTotalPrice);
+
+        // Update total price
+        function updateTotalPrice() {
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const total = (basePrice + accessoryPrice + addonsPrice) * quantity;
+            document.getElementById('totalPrice').textContent = '€' + total.toLocaleString('fr-FR');
+        }
+    </script>
+</body>
+</html>
