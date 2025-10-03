@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Glacialis by Glacier® | Bain Glacé 0°C - Thérapie par le Froid</title>
     <meta name="description" content="Découvrez le Glacialis by Glacier® - Le bain glacé ultime atteignant 0°C. Technologie de pointe, design élégant, fabrication française.">
 
@@ -110,6 +113,25 @@
         .toggle-option-card {
             transition: all 0.3s ease;
         }
+
+        /* Clickable accessories styling */
+        .clickable-accessory {
+            cursor: pointer;
+            color: #4A90E2;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .clickable-accessory:hover {
+            color: #1e3c72;
+            font-weight: 600;
+            transform: translateX(3px);
+        }
+
+        .clickable-accessory:active {
+            transform: scale(0.98);
+        }
     </style>
 
     <!-- SEO & Performance -->
@@ -159,10 +181,6 @@
                 <div class="product-gallery">
                     <!-- Carousel principal style Icetubs -->
                     <div class="main-carousel">
-                        <div class="badge-zero">
-                            <span class="badge-temp">0°C</span>
-                            <span class="badge-text">Température minimale</span>
-                        </div>
                         <div class="carousel-container">
                             <img src="images site/images/18201107501351786863.jpg" alt="Baignoire Glacialis vue principale" class="carousel-image active">
                             <img src="images site/images/Modif site/inox/IMG_0035.png" alt="Baignoire Glacialis" class="carousel-image">
@@ -222,10 +240,7 @@
                                                 <li>Volume : 510 litres</li>
                                                 <li>Acier inoxydable 316SS premium</li>
                                                 <li>Isolation thermique renforcée</li>
-                                                <li class="feature-with-image">
-                                                    <span>Repose-pieds en bois premium inclus</span>
-                                                    <img src="images site/images/bois/10..jpg" alt="Repose-pieds" class="inline-feature-image">
-                                                </li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('footrest')" style="pointer-events: auto !important;">Repose-pieds en bois premium inclus</span></li>
                                             </ul>
                                         </div>
                                         <div class="option-price">
@@ -256,10 +271,14 @@
                                         <div class="option-features">
                                             <h5>Accessoires inclus</h5>
                                             <ul>
-                                                <li>Filtre 5 pouces + 3 éléments filtrants</li>
-                                                <li>Clé de filtre + Casque de sécurité</li>
-                                                <li>2 tuyaux d'eau + Filet de cheveux</li>
-                                                <li>4 colliers de serrage + Kit complet</li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('filterICE')">1x Filtre 5 pouces</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('keyFilterICE')">1x Clé à Filtre</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('keyGridICE')">1x Clé à Grille filtrante</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('screwdriverICE')">1x Tourne vis plate</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('pipesICE')">2x tuyaux d'eau</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('gridICE')">1x Grille filtrante</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('clampsICE')">4x Colliers de serrage</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('teflonICE')">1x ruban téflon</span></li>
                                             </ul>
                                         </div>
                                         <div class="option-price">
@@ -281,10 +300,14 @@
                                         <div class="option-features">
                                             <h5>Accessoires inclus</h5>
                                             <ul>
-                                                <li>Filtre transparent + 2 éléments 10"</li>
-                                                <li>Clé de filtre + 2 tuyaux d'eau</li>
-                                                <li>2 adaptateurs 90° + 2 adaptateurs</li>
-                                                <li>8 joints + Filet + Kit complet</li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('filterPremium')">1x Filtre</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('keyFilterPremium')">1x Clé à Filtre</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('pipesPremium')">2x tuyaux d'eau</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('gridPremium')">1x Grille filtrante</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('adapter90Premium')">2x Adapteur 90°</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('adapterPremium')">2x Adapteur</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('jointsPremium')">8x Joint en caoutchouc</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('teflonPremium')">1x ruban téflon</span></li>
                                             </ul>
                                         </div>
                                         <div class="option-price">
@@ -399,6 +422,18 @@
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Guarantees - Aligned with configuration -->
+                        <div class="product-guarantees">
+                            <div class="guarantee-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Livraison gratuite</span>
+                            </div>
+                            <div class="guarantee-item">
+                                <i class="fas fa-tools"></i>
+                                <span>Garantie 2 ans complète</span>
                             </div>
                         </div>
                     </div>
@@ -534,16 +569,6 @@
                     </div>
 
 
-                    <div class="product-guarantees">
-                        <div class="guarantee-item">
-                            <i class="fas fa-truck"></i>
-                            <span>Livraison gratuite</span>
-                        </div>
-                        <div class="guarantee-item">
-                            <i class="fas fa-tools"></i>
-                            <span>Garantie 2 ans complète</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1365,7 +1390,7 @@
                     const filtrationOption = {
                         id: 'option-filtration',
                         name: 'Système de Filtration Premium (Pack)',
-                        price: 299,
+                        price: 199,
                         quantity: 1,
                         type: 'bundle',
                         image: filterImage
@@ -1596,7 +1621,7 @@
                     'Cartouches remplaçables',
                     'Installation facile'
                 ],
-                imageIce: 'images site/images/Modif site/filtre et couv/Filtre blanc.png',
+                imageIce: 'images site/images/Modif site/chiller/Accessoire ICE/Filtre 5 pouces ICE.png',
                 imagePremium: 'images site/images/Modif site/filtre et couv/cartridge_filter.png'
             },
             cover: {
@@ -1611,11 +1636,223 @@
                     'Maintien de la température'
                 ],
                 image: 'images site/images/Modif site/filtre et couv/IMG_couvd.jpg.png'
+            },
+            footrest: {
+                title: 'Repose-Pieds en Bois Premium GLACIALIS',
+                price: 0,
+                description: 'Repose-pieds ergonomique en bois naturel premium, spécialement conçu pour votre baignoire GLACIALIS. Fabriqué avec du bois de première qualité traité pour résister à l\'humidité, il offre un confort optimal et une stabilité maximale pendant vos séances de thérapie par le froid.',
+                features: [
+                    'Bois naturel premium avec traitement hydrofuge',
+                    'Design ergonomique pour un confort optimal',
+                    'Surface antidérapante pour votre sécurité',
+                    'Dimensions parfaitement adaptées à la baignoire GLACIALIS',
+                    'Résistance exceptionnelle à l\'humidité et au froid',
+                    'Finition soignée et esthétique élégante',
+                    'Installation simple sans outils',
+                    'Entretien minimal requis',
+                    'Garantie 2 ans incluse',
+                    'INCLUS dans votre pack GLACIALIS'
+                ],
+                image: 'images site/images/Modif site/bois/10..jpg'
+            },
+            filterICE: {
+                title: 'Filtre 5 pouces',
+                price: 0,
+                description: 'Filtre haute performance de 5 pouces pour le Chiller ICE. Assure une filtration optimale de l\'eau pour maintenir une pureté cristalline.',
+                features: [
+                    'Filtration 5 pouces haute capacité',
+                    'Élimine les particules fines',
+                    'Longue durée de vie',
+                    'Compatible Chiller ICE',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Filtre 5 pouces ICE.png'
+            },
+            keyFilterICE: {
+                title: 'Clé à Filtre',
+                price: 0,
+                description: 'Clé spécialement conçue pour faciliter l\'installation et le changement du filtre.',
+                features: [
+                    'Ergonomique et robuste',
+                    'Facilite le changement de filtre',
+                    'Matériau résistant',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Clé à filtre ICE.png'
+            },
+            keyGridICE: {
+                title: 'Clé à Grille Filtrante',
+                price: 0,
+                description: 'Outil spécialisé pour l\'entretien de la grille filtrante.',
+                features: [
+                    'Accès facile à la grille',
+                    'Maintenance simplifiée',
+                    'Construction durable',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Clé à Grille filtrante ICE.png'
+            },
+            screwdriverICE: {
+                title: 'Tournevis Plat',
+                price: 0,
+                description: 'Tournevis plat professionnel pour l\'assemblage et la maintenance.',
+                features: [
+                    'Manche ergonomique',
+                    'Acier trempé',
+                    'Usage professionnel',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Tourne vise plate ICE.png'
+            },
+            pipesICE: {
+                title: 'Tuyaux d\'Eau (x2)',
+                price: 0,
+                description: 'Ensemble de deux tuyaux haute qualité pour la circulation optimale de l\'eau.',
+                features: [
+                    'Matériau résistant au froid',
+                    'Connexions étanches',
+                    'Longueur optimale',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Tuyau d\'eau ICE.png'
+            },
+            gridICE: {
+                title: 'Grille Filtrante',
+                price: 0,
+                description: 'Grille de filtration pour retenir les plus grosses particules.',
+                features: [
+                    'Maillage fin',
+                    'Acier inoxydable',
+                    'Facile à nettoyer',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Grille filtrante ICE.png'
+            },
+            clampsICE: {
+                title: 'Colliers de Serrage (x4)',
+                price: 0,
+                description: 'Set de 4 colliers de serrage professionnels pour connexions sécurisées.',
+                features: [
+                    'Acier inoxydable',
+                    'Serrage optimal',
+                    'Anti-fuite',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/Ceinture ICE.png'
+            },
+            teflonICE: {
+                title: 'Ruban Téflon',
+                price: 0,
+                description: 'Ruban téflon professionnel pour étanchéité parfaite des raccords.',
+                features: [
+                    'Étanchéité garantie',
+                    'Résistant à l\'eau froide',
+                    'Usage professionnel',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire ICE/ruban téflon. ICE.png'
+            },
+            filterPremium: {
+                title: 'Filtre Transparent',
+                price: 0,
+                description: 'Filtre transparent haute performance pour le Chiller PREMIUM.',
+                features: [
+                    'Corps transparent',
+                    'Visualisation du niveau de saleté',
+                    'Cartouche haute capacité',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Filtre NON ICE.png'
+            },
+            keyFilterPremium: {
+                title: 'Clé à Filtre Premium',
+                price: 0,
+                description: 'Clé ergonomique pour le système de filtration PREMIUM.',
+                features: [
+                    'Design ergonomique',
+                    'Compatible filtre transparent',
+                    'Matériau robuste',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Clé à filtre NON ICE.png'
+            },
+            pipesPremium: {
+                title: 'Tuyaux d\'Eau Premium (x2)',
+                price: 0,
+                description: 'Tuyaux renforcés pour le système PREMIUM.',
+                features: [
+                    'Qualité supérieure',
+                    'Flexibles et résistants',
+                    'Raccords rapides',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/tuyaux d\'eau NON ICE.png'
+            },
+            gridPremium: {
+                title: 'Grille Filtrante Premium',
+                price: 0,
+                description: 'Grille de filtration haute performance pour système PREMIUM.',
+                features: [
+                    'Filtration optimisée',
+                    'Matériaux premium',
+                    'Longue durée de vie',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Grille Filtrante NON ICE.png'
+            },
+            adapter90Premium: {
+                title: 'Adaptateurs 90° (x2)',
+                price: 0,
+                description: 'Adaptateurs coudés pour installation optimale.',
+                features: [
+                    'Angle 90° précis',
+                    'Connexion sécurisée',
+                    'Matériau durable',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Adapteur 90° NON ICE.png'
+            },
+            adapterPremium: {
+                title: 'Adaptateurs Standard (x2)',
+                price: 0,
+                description: 'Adaptateurs de connexion pour système PREMIUM.',
+                features: [
+                    'Compatibilité universelle',
+                    'Étanchéité parfaite',
+                    'Installation facile',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Adapteur NON ICE.png'
+            },
+            jointsPremium: {
+                title: 'Joints en Caoutchouc (x8)',
+                price: 0,
+                description: 'Set complet de 8 joints pour étanchéité parfaite.',
+                features: [
+                    'Caoutchouc haute qualité',
+                    'Résistant au froid et chaud',
+                    'Étanchéité garantie',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/Joint en caoutchouc NON ICE.png'
+            },
+            teflonPremium: {
+                title: 'Ruban Téflon Premium',
+                price: 0,
+                description: 'Ruban téflon professionnel haute qualité.',
+                features: [
+                    'Grade professionnel',
+                    'Résistance extrême',
+                    'Étanchéité optimale',
+                    'Inclus dans le pack'
+                ],
+                image: 'images site/images/Modif site/chiller/Accessoire Premium/ruban téflon NON ICE.png'
             }
         };
 
-        // Function to open the modal with option details
+        // Function to open the modal with option details - UPDATED 2024-12-19 v4
         function openOptionModal(optionType) {
+            console.log('=== VERSION 4 - INCLUS FIX LOADED ===');
             const modal = document.getElementById('option-modal');
             const option = optionDetails[optionType];
 
@@ -1632,7 +1869,25 @@
                 // Set title, description, and price
                 document.getElementById('modal-title').textContent = option.title;
                 document.getElementById('modal-description').textContent = option.description;
-                document.getElementById('modal-price').textContent = option.price + '€';
+
+                // Debug logging
+                console.log('DEBUG: option.price =', option.price, 'type:', typeof option.price);
+                console.log('DEBUG: option.price === 0?', option.price === 0);
+
+                // Pour les accessoires inclus (prix = 0), afficher "Inclus" au lieu de "0€"
+                // VERSION 2024.12.19.1 - Force cache refresh
+                const priceElement = document.getElementById('modal-price');
+                if (option.price === 0) {
+                    console.log('DEBUG v2: Setting price to Inclus for', option.title);
+                    priceElement.textContent = 'Inclus';
+                    priceElement.style.color = '#4CAF50';
+                    priceElement.style.fontWeight = 'bold';
+                } else {
+                    console.log('DEBUG v2: Setting price to', option.price + '€');
+                    priceElement.textContent = option.price + '€';
+                    priceElement.style.color = '#333';
+                    priceElement.style.fontWeight = 'normal';
+                }
 
                 // Set features list
                 const featuresList = document.getElementById('modal-features');
@@ -1711,8 +1966,9 @@
 
             // Make functions globally available
             window.initializeOptionTitles = initializeOptionTitles;
-            window.openOptionModal = openOptionModal;
             window.closeOptionModal = closeOptionModal;
+
+            // openOptionModalV3 function removed - all accessories use existing modal functions
         })();
 
         // Listen for chiller model changes to update filter image if it's visible
@@ -1770,6 +2026,190 @@
                 });
             }
         }
+
+        // Rendre le carousel existant sticky
+        function initializeStickyCarousel() {
+            console.log('🚀 Initializing sticky carousel...');
+
+            const carousel = document.querySelector('.product-gallery');
+            const productHero = document.querySelector('.product-hero');
+
+            if (!carousel || !productHero) {
+                console.log('❌ Missing elements for sticky carousel');
+                return;
+            }
+
+            console.log('✅ Elements found, setting up sticky carousel');
+
+            // Variables pour la gestion du sticky (globales dans cette fonction)
+            let originalPosition = null;
+            let isSticky = false;
+
+            function updateStickyCarousel() {
+                console.log('🔄 updateStickyCarousel called');
+
+                const heroBottom = productHero.offsetTop + productHero.offsetHeight;
+                const configCompleteTitle = Array.from(document.querySelectorAll('h3')).find(h =>
+                    h.textContent.trim() === 'Votre configuration complète'
+                );
+                const configCompleteTop = configCompleteTitle ? configCompleteTitle.closest('div').offsetTop : 999999;
+                const scrollY = window.scrollY;
+
+                // Sauvegarder la position originale au premier passage
+                if (originalPosition === null) {
+                    originalPosition = {
+                        top: carousel.offsetTop,
+                        left: carousel.offsetLeft,
+                        width: carousel.offsetWidth,
+                        height: carousel.offsetHeight
+                    };
+                    console.log('💾 Original position saved:', originalPosition);
+                }
+
+                // Calculer les points d'activation
+                const carouselBottom = originalPosition.top + originalPosition.height;
+                const activationPoint = carouselBottom + 100;
+                const deactivationPoint = configCompleteTop - 200;
+
+                // Debug logging
+                console.log('🎯 Sticky conditions:', {
+                    scrollY,
+                    activationPoint,
+                    deactivationPoint,
+                    condition1: scrollY > activationPoint,
+                    condition2: scrollY < deactivationPoint,
+                    shouldBeSticky: scrollY > activationPoint && scrollY < deactivationPoint,
+                    isSticky,
+                    configCompleteTitle: configCompleteTitle ? 'found' : 'not found'
+                });
+
+                // Activer le sticky quand on dépasse le carousel initial
+                // Et le désactiver quand on atteint "Votre configuration complète"
+                if (scrollY > activationPoint && scrollY < deactivationPoint) {
+                    if (!isSticky) {
+                        console.log('✅ Activating sticky mode');
+                        // Activer le mode sticky
+                        carousel.style.position = 'fixed';
+                        carousel.style.top = '100px';
+                        carousel.style.left = originalPosition.left + 'px';
+                        carousel.style.width = originalPosition.width + 'px';
+                        carousel.style.zIndex = '999';
+                        carousel.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                        carousel.style.backdropFilter = 'blur(20px)';
+                        carousel.style.webkitBackdropFilter = 'blur(20px)';
+                        carousel.style.borderRadius = '15px';
+                        carousel.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15)';
+                        carousel.style.padding = '20px';
+                        carousel.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+                        carousel.style.transition = 'all 0.3s ease-in-out';
+
+                        // Créer un placeholder pour maintenir l'espace
+                        const placeholder = document.createElement('div');
+                        placeholder.id = 'carousel-placeholder';
+                        placeholder.style.height = originalPosition.height + 'px';
+                        placeholder.style.width = originalPosition.width + 'px';
+                        carousel.parentNode.insertBefore(placeholder, carousel.nextSibling);
+
+                        isSticky = true;
+                        console.log('🎉 Sticky mode activated successfully');
+                    }
+                } else {
+                    if (isSticky) {
+                        console.log('❌ Deactivating sticky mode');
+                        // Désactiver le mode sticky
+                        carousel.style.position = 'static';
+                        carousel.style.top = 'auto';
+                        carousel.style.left = 'auto';
+                        carousel.style.width = 'auto';
+                        carousel.style.zIndex = 'auto';
+                        carousel.style.backgroundColor = 'transparent';
+                        carousel.style.backdropFilter = 'none';
+                        carousel.style.webkitBackdropFilter = 'none';
+                        carousel.style.borderRadius = '0';
+                        carousel.style.boxShadow = 'none';
+                        carousel.style.padding = '0';
+                        carousel.style.border = 'none';
+                        carousel.style.transition = 'none';
+
+                        // Supprimer le placeholder
+                        const placeholder = document.getElementById('carousel-placeholder');
+                        if (placeholder) {
+                            placeholder.remove();
+                        }
+
+                        isSticky = false;
+                        console.log('🔄 Sticky mode deactivated');
+                    }
+                }
+            }
+
+            // Gérer le redimensionnement de la fenêtre
+            function handleResize() {
+                if (isSticky) {
+                    // Recalculer la position lors du redimensionnement
+                    const productDetails = document.querySelector('.product-details');
+                    if (productDetails) {
+                        const rect = productDetails.getBoundingClientRect();
+                        const galleryRect = carousel.getBoundingClientRect();
+                        carousel.style.left = (window.innerWidth - galleryRect.width - rect.width - 60) / 2 + 'px';
+                    }
+                } else {
+                    // Remettre à jour la position originale
+                    originalPosition = null;
+                }
+            }
+
+            // Écouter le scroll et le redimensionnement
+            console.log('🎧 Adding event listeners...');
+            window.addEventListener('scroll', updateStickyCarousel);
+            window.addEventListener('resize', handleResize);
+
+            // Initialiser
+            console.log('🏁 Running initial update...');
+            updateStickyCarousel();
+
+            console.log('✅ Sticky carousel initialization complete');
+        }
+
+        // Initialiser le sticky carousel immédiatement après la définition
+        console.log('🏁 Starting sticky carousel initialization...');
+
+        // Multiple initialization methods to ensure it works
+        function ensureInitialization() {
+            console.log('🔄 Ensuring sticky carousel initialization...');
+            if (typeof initializeStickyCarousel === 'function') {
+                initializeStickyCarousel();
+                console.log('✅ Sticky carousel initialized successfully');
+            } else {
+                console.error('❌ initializeStickyCarousel function not found');
+            }
+        }
+
+        // Method 1: Check document ready state
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', ensureInitialization);
+        } else {
+            ensureInitialization();
+        }
+
+        // Method 2: Backup with setTimeout
+        setTimeout(ensureInitialization, 100);
+
+        // Method 3: Window load event as final backup
+        window.addEventListener('load', ensureInitialization);
+
+        // Method 4: Force initialization to bypass any previous JS errors
+        setTimeout(function() {
+            console.log('🔧 Force initialization regardless of previous errors');
+            if (typeof initializeStickyCarousel === 'function') {
+                try {
+                    initializeStickyCarousel();
+                    console.log('✅ Forced sticky carousel initialization completed');
+                } catch (error) {
+                    console.error('❌ Forced initialization failed:', error);
+                }
+            }
+        }, 2000);
     </script>
 
     <!-- Shopping Cart Script -->
