@@ -366,7 +366,54 @@ document.addEventListener('DOMContentLoaded', function() {
     checkCookieConsent();
 
     /* ============================================
-       17. NEWSLETTER SUBSCRIPTION
+       17. MOBILE EXCLUSIVE OFFERS VERTICAL LAYOUT
+       ============================================ */
+
+    // Fonction pour forcer l'affichage vertical des offres exclusives sur mobile
+    function forceMobileVerticalOffers() {
+        if (window.innerWidth <= 768) {
+            const exclusiveSection = document.querySelector('.exclusive-offer-section');
+            if (exclusiveSection) {
+                // Cibler le conteneur avec style inline grid
+                const gridContainer = exclusiveSection.querySelector('div[style*="grid"]');
+                if (gridContainer) {
+                    // Remplacer complètement le style inline
+                    gridContainer.style.cssText = 'display: flex !important; flex-direction: column !important; gap: 25px !important; max-width: 400px !important; margin: 0 auto !important;';
+                    console.log('✅ Affichage vertical forcé pour les offres exclusives');
+                }
+            }
+        }
+    }
+
+    // Appliquer immédiatement
+    forceMobileVerticalOffers();
+
+    // Réappliquer lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', debounce(forceMobileVerticalOffers, 250));
+
+    // Observer les changements DOM pour réappliquer si nécessaire
+    if ('MutationObserver' in window) {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                    forceMobileVerticalOffers();
+                }
+            });
+        });
+
+        // Observer les changements de style sur la section
+        const exclusiveSection = document.querySelector('.exclusive-offer-section');
+        if (exclusiveSection) {
+            observer.observe(exclusiveSection, {
+                attributes: true,
+                subtree: true,
+                attributeFilter: ['style']
+            });
+        }
+    }
+
+    /* ============================================
+       18. NEWSLETTER SUBSCRIPTION
        ============================================ */
 
     const newsletterForms = document.querySelectorAll('.newsletter-form');

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles-new.css">
     <link rel="stylesheet" href="produit-styles.css">
     <link rel="stylesheet" href="mobile-optimization.css">
+    <link rel="stylesheet" href="mobile-produit-optimization.css">
     <link rel="stylesheet" href="cart-styles.css">
     <link rel="stylesheet" href="chiller-selector.css">
     <link rel="stylesheet" href="icetubs-selector.css">
@@ -240,7 +241,7 @@
                                                 <li>Volume : 510 litres</li>
                                                 <li>Acier inoxydable 316SS premium</li>
                                                 <li>Isolation thermique renforcée</li>
-                                                <li><span class="clickable-accessory" onclick="openOptionModal('footrest')" style="pointer-events: auto !important;">Repose-pieds en bois premium inclus</span></li>
+                                                <li><span class="clickable-accessory" onclick="openOptionModal('footrest')" style="pointer-events: auto !important;">Repose-pieds en bois de cèdre inclus</span></li>
                                             </ul>
                                         </div>
                                         <div class="option-price">
@@ -324,16 +325,16 @@
                         <h3 style="font-size: 1.6rem; color: #1e3c72; margin-bottom: 25px; text-align: center;">Options Additionnelles Disponibles</h3>
                         <div class="toggle-options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
 
-                            <!-- Option Système de Filtration -->
-                            <div class="toggle-option-card" data-option="filter" data-price="299">
+                            <!-- Option Élément filtrant -->
+                            <div class="toggle-option-card" data-option="filter" data-price="1.5">
                                 <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #f8f9fa; border-radius: 12px; transition: all 0.3s;">
                                     <div style="flex: 1;">
                                         <h4 style="margin: 0 0 5px 0; color: #4A90E2; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; text-decoration: underline; display: inline-block;" class="option-title" data-option="filter" title="Cliquez pour voir les détails">
                                             <i class="fas fa-info-circle" style="font-size: 0.9rem; margin-right: 5px;"></i>
-                                            Système de Filtration
+                                            Élément filtrant
                                         </h4>
                                         <p style="margin: 0; color: #666; font-size: 0.9rem;">Eau pure et cristalline</p>
-                                        <span style="color: #4A90E2; font-weight: 700; font-size: 1rem;">+299€</span>
+                                        <span style="color: #4A90E2; font-weight: 700; font-size: 1rem;">+1,5€</span>
                                     </div>
                                     <label class="toggle-switch">
                                         <input type="checkbox" class="option-toggle" data-option="filter">
@@ -342,7 +343,7 @@
                                 </div>
                                 <!-- Image cachée par défaut -->
                                 <div class="option-image-container" style="display: none; padding: 20px; background: #fff; border-radius: 0 0 12px 12px;">
-                                    <img id="filter-option-image" src="images site/images/Modif site/filtre et couv/filtre.png" alt="Système de Filtration" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                    <img id="filter-option-image" src="images site/images/Modif site/filtre et couv/filtre.png" alt="Élément filtrant" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                                     <div style="margin-top: 15px; padding: 15px; background: #f0f8ff; border-radius: 8px;">
                                         <h5 style="margin: 0 0 10px 0; color: #1e3c72;">Caractéristiques :</h5>
                                         <ul style="margin: 0; padding-left: 20px; color: #666;">
@@ -387,6 +388,90 @@
                             </div>
                         </div>
                     </div>
+
+                        <!-- Offre Exclusive Section -->
+                        <div class="exclusive-offer-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 25px 20px; margin: 30px 0; box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);">
+                            <h3 style="color: white; text-align: center; font-size: 1.4rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">
+                                🎁 Offre Exclusive 🎁
+                            </h3>
+                            <p style="color: rgba(255, 255, 255, 0.9); text-align: center; font-size: 0.9rem; margin-bottom: 20px;">
+                                Économisez avec nos packs complets !
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 800px; margin: 0 auto;">
+                                <!-- Pack ICE -->
+                                <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -3px; right: -30px; background: #ff4757; color: white; padding: 3px 35px; transform: rotate(45deg); font-size: 0.7rem; font-weight: bold;">
+                                        -105€
+                                    </div>
+                                    <h4 style="color: #1e3c72; font-size: 1.2rem; margin-bottom: 15px; text-align: center;">
+                                        ❄️ Pack ICE
+                                    </h4>
+                                    <ul style="list-style: none; padding: 0; margin-bottom: 15px; font-size: 0.85rem;">
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            1 Chiller ICE + 1 Baignoire GLACIALIS
+                                        </li>
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            5 Éléments filtrants
+                                        </li>
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            1 Couverture premium
+                                        </li>
+                                    </ul>
+                                    <div style="text-align: center; margin-bottom: 15px;">
+                                        <p style="color: #999; text-decoration: line-through; font-size: 0.8rem; margin-bottom: 2px;">
+                                            5705,50€
+                                        </p>
+                                        <p style="color: #667eea; font-size: 1.6rem; font-weight: bold; margin: 0;">
+                                            5 600€
+                                        </p>
+                                    </div>
+                                    <button onclick="addPackIceToCart()" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+                                        <i class="fas fa-shopping-cart" style="margin-right: 5px;"></i>
+                                        Commander
+                                    </button>
+                                </div>
+
+                                <!-- Pack PREMIUM -->
+                                <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                                    <div style="position: absolute; top: -3px; right: -30px; background: #ff4757; color: white; padding: 3px 35px; transform: rotate(45deg); font-size: 0.7rem; font-weight: bold;">
+                                        -105€
+                                    </div>
+                                    <h4 style="color: #1e3c72; font-size: 1.2rem; margin-bottom: 15px; text-align: center;">
+                                        🌊 Pack PREMIUM
+                                    </h4>
+                                    <ul style="list-style: none; padding: 0; margin-bottom: 15px; font-size: 0.85rem;">
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            1 Chiller Premium + 1 Baignoire GLACIALIS
+                                        </li>
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            5 Éléments filtrants
+                                        </li>
+                                        <li style="margin-bottom: 5px; color: #555;">
+                                            <i class="fas fa-check" style="color: #4CAF50; margin-right: 5px; font-size: 0.8rem;"></i>
+                                            1 Couverture premium
+                                        </li>
+                                    </ul>
+                                    <div style="text-align: center; margin-bottom: 15px;">
+                                        <p style="color: #999; text-decoration: line-through; font-size: 0.8rem; margin-bottom: 2px;">
+                                            5205,50€
+                                        </p>
+                                        <p style="color: #f093fb; font-size: 1.6rem; font-weight: bold; margin: 0;">
+                                            5 100€
+                                        </p>
+                                    </div>
+                                    <button onclick="addPackPremiumToCart()" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+                                        <i class="fas fa-shopping-cart" style="margin-right: 5px;"></i>
+                                        Commander
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Configuration Summary -->
                         <div class="configuration-summary">
@@ -487,8 +572,8 @@
                         // Define upsell options
                         const upsellOptions = {
                             filter: {
-                                name: 'Système de Filtration',
-                                price: 299,
+                                name: 'Élément filtrant',
+                                price: 1.5,
                                 description: 'Kit de filtration complet pour maintenir une eau propre et claire. Comprend le système de filtration avec cartouches remplaçables pour une purification optimale de l\'eau.',
                                 image: 'images site/images/Modif site/filtre et couv/Filtre blanc.png',
                                 imagePremium: 'images site/images/Modif site/filtre et couv/cartridge_filter.png'
@@ -556,11 +641,11 @@
 
                     </div>
 
-                    <div class="key-features">
-                        <h3>Points forts</h3>
-                        <ul>
-                            <li><i class="fas fa-thermometer-empty"></i> <strong>Température 0°C à 42°C</strong> - Refroidissement extrême</li>
-                            <li><i class="fas fa-bolt"></i> Système de refroidissement 1.5HP haute performance</li>
+                    <div class="key-features" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                        <h3 style="text-align: center; margin-bottom: 20px;">Points forts</h3>
+                        <ul style="list-style: none; padding: 0; text-align: left; display: inline-block;">
+                            <li><i class="fas fa-thermometer-empty"></i> <strong>Température 0°C à 40°C</strong> - Refroidissement extrême</li>
+                            <li><i class="fas fa-bolt"></i> Système de refroidissement 1.0HP haute performance</li>
                             <li><i class="fas fa-water"></i> Capacité 510L pour un confort optimal</li>
                             <li><i class="fas fa-filter"></i> Système de filtration intégré avancé</li>
                             <li><i class="fas fa-mobile-alt"></i> Contrôle via application mobile</li>
@@ -621,6 +706,7 @@
                                             <li><strong>Refroidissement:</strong> 2.81kW</li>
                                             <li><strong>Chauffage:</strong> 3.37kW</li>
                                             <li><strong>COP:</strong> 4.08</li>
+                                            <li><strong>Environnement:</strong> 15-43°C (Refroid.) / 15-35°C (Chauf.)</li>
                                         </ul>
                                     </div>
                                     <div class="spec-group">
@@ -636,7 +722,7 @@
                                         <h3>Contrôle & Connectivité</h3>
                                         <ul>
                                             <li><strong>Contrôle:</strong> iOS & Android APP, WIFI</li>
-                                            <li><strong>Pompe:</strong> Moteur DC 80W</li>
+                                            <li><strong>Pompe:</strong> Moteur DC 88W</li>
                                             <li><strong>Filtration:</strong> Double filtre externe</li>
                                             <li><strong>Connexion rapide:</strong> Oui</li>
                                         </ul>
@@ -652,8 +738,8 @@
                                         <h3>Dimensions & Capacité</h3>
                                         <ul>
                                             <li><strong>Dimensions:</strong> 540 x 400 x 564 mm</li>
-                                            <li><strong>Poids net:</strong> 39.4kg (RW) / 40.1kg (RV)</li>
-                                            <li><strong>Réfrigérant:</strong> R32 (360g / 400g)</li>
+                                            <li><strong>Poids net:</strong> 40.1kg (RW) / 39.4kg (RV)</li>
+                                            <li><strong>Réfrigérant:</strong> R32 (380g RW / 400g RV)</li>
                                             <li><strong>Désinfection:</strong> Générateur d'ozone</li>
                                         </ul>
                                     </div>
@@ -665,6 +751,7 @@
                                             <li><strong>Refroidissement:</strong> 2.51kW (RW) / 3.05kW (RV)</li>
                                             <li><strong>Chauffage:</strong> 3.80kW (RW) / 4.04kW (RV)</li>
                                             <li><strong>COP:</strong> 2.46 (RW) / 2.85 (RV)</li>
+                                            <li><strong>Environnement:</strong> 18-43°C (Refroid.) / 15-35°C (Chauf.)</li>
                                         </ul>
                                     </div>
                                     <div class="spec-group">
@@ -696,7 +783,7 @@
                             <div class="tech-item">
                                 <i class="fas fa-snowflake"></i>
                                 <h3>Système de Refroidissement Haute Performance</h3>
-                                <p>Compresseur 1.5HP dernière génération avec technologie inverter pour un refroidissement rapide et silencieux.</p>
+                                <p>Compresseur haute performance dernière génération avec technologie inverter pour un refroidissement rapide et silencieux.</p>
                             </div>
                             <div class="tech-item">
                                 <i class="fas fa-filter"></i>
@@ -762,11 +849,11 @@
                         </ul>
                     </div>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
-                    <img src="images site/images/TUYA/01.webp" alt="TUYA App Screen 1" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <img src="images site/images/TUYA/02.webp" alt="TUYA App Screen 2" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <img src="images site/images/TUYA/05.webp" alt="TUYA App Screen 3" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <img src="images site/images/TUYA/06.webp" alt="TUYA App Screen 4" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                    <img src="images site/images/TUYA/01.webp" alt="TUYA App Screen 1" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <img src="images site/images/TUYA/02.webp" alt="TUYA App Screen 2" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <img src="images site/images/TUYA/05.webp" alt="TUYA App Screen 3" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <img src="images site/images/TUYA/06.webp" alt="TUYA App Screen 4" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                 </div>
             </div>
 
@@ -812,32 +899,11 @@
                         <ul style="list-style: none; padding: 0;">
                             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Résistance maximale à la corrosion</li>
                             <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Durabilité exceptionnelle</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Qualité alimentaire certifiée</li>
                         </ul>
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <img src="images%20site/images/Modif%20site/inox/IMG_0025.png" alt="Plateau 316SS" style="width: 100%; border-radius: 10px;">
-                        <img src="images%20site/images/Modif%20site/inox/IMG_0090.jpg" alt="Plateau 316SS Detail" style="width: 100%; border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Repose-Pieds Bois Inclus -->
-            <div style="background: white; border-radius: 20px; padding: 60px; margin-bottom: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-                <h3 style="font-size: 2rem; margin-bottom: 30px; color: #1e3c72;"><i class="fas fa-shoe-prints" style="margin-right: 15px;"></i>Repose-Pieds en Bois Premium - Inclus</h3>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: center;">
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <img src="images site/images/bois/10..jpg" alt="Repose-pieds bois" style="width: 100%; border-radius: 10px;">
-                        <img src="images site/images/bois/IMG_0015.png" alt="Repose-pieds détail" style="width: 100%; border-radius: 10px;">
-                    </div>
-                    <div>
-                        <h4 style="color: #2c5aa0; margin-bottom: 15px;">Confort & Élégance</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Bois traité anti-humidité</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Design ergonomique</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>Antidérapant</li>
-                            <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: #4CAF50; margin-right: 10px;"></i>INCLUS dans votre commande</li>
-                        </ul>
+                        <img src="images%20site/images/Modif%20site/chiller/Chiller%20ice%20prof.png" alt="Chiller ICE Professionnel" style="width: 100%; border-radius: 10px;">
+                        <img src="images%20site/images/Modif%20site/chiller/Chiller%20prémium%20prof.png" alt="Chiller Premium Professionnel" style="width: 100%; border-radius: 10px;">
                     </div>
                 </div>
             </div>
@@ -987,56 +1053,6 @@
                 </div>
             </div>
 
-            <!-- Duo Baignoire + Chiller -->
-            <div style="background: white; border-radius: 20px; padding: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-                <h3 style="font-size: 2rem; margin-bottom: 30px; color: #1e3c72;"><i class="fas fa-bath" style="margin-right: 15px;"></i>Le Duo Parfait : Baignoire + Chiller</h3>
-
-                <!-- Images du modèle ICE -->
-                <div id="ice-images" class="chiller-images" style="margin-bottom: 30px;">
-                    <h4 style="color: #667eea; margin-bottom: 20px;">Chiller ICE - Vues du produit</h4>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <img src="images site/images/Modif site/chiller/Chiller ice pose.png" alt="Chiller ICE vue pose" style="width: 100%; height: 300px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                        <img src="images site/images/Modif site/chiller/Chiller ice prof.png" alt="Chiller ICE vue profil" style="width: 100%; height: 300px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                    </div>
-                </div>
-
-                <!-- Images du modèle PREMIUM (cachées par défaut) -->
-                <div id="premium-images" class="chiller-images" style="display: none; margin-bottom: 30px;">
-                    <h4 style="color: #f093fb; margin-bottom: 20px;">Chiller PREMIUM - Vues du produit</h4>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <img src="images site/images/Modif site/chiller/Chiller premium pose.png" alt="Chiller PREMIUM vue pose" style="width: 100%; height: 300px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                        <img src="images site/images/Modif site/chiller/Chiller prémium prof.png" alt="Chiller PREMIUM vue profil" style="width: 100%; height: 300px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                    </div>
-                </div>
-
-                <!-- Images de la baignoire -->
-                <div style="margin-top: 30px;">
-                    <h4 style="color: #1e3c72; margin-bottom: 20px;">Baignoire en Acier Inoxydable 316SS</h4>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                        <img src="images site/images/Modif site/inox/IMG_0035.png" alt="Baignoire vue 2" style="width: 100%; height: 250px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                        <img src="images site/images/Modif site/inox/IMG_0050.jpeg" alt="Baignoire vue 1" style="width: 100%; height: 250px; object-fit: contain; border-radius: 10px; background: #f8f9fa;">
-                    </div>
-                </div>
-                <div style="background: #f8f9fa; border-radius: 15px; padding: 30px; margin-top: 30px;">
-                    <h4 style="color: #1e3c72; margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-snowflake" style="margin-right: 10px; color: #4A90E2;"></i>Le Refroidisseur (Chiller)</h4>
-                    <p style="color: #666; line-height: 1.8; margin-bottom: 20px;">Notre chiller professionnel assure une température précise et constante de votre bain glacé. Conçu pour une performance optimale, il maintient l'eau à la température idéale pour maximiser les bénéfices de la thérapie par le froid.</p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-                        <ul style="color: #666; line-height: 1.8; margin: 0;">
-                            <li><strong>Plage de température :</strong> 3°C à 42°C</li>
-                            <li><strong>Réfrigérant écologique :</strong> R32</li>
-                        </ul>
-                        <ul style="color: #666; line-height: 1.8; margin: 0;">
-                            <li><strong>Fonctionnement :</strong> Ultra silencieux</li>
-                            <li><strong>Contrôle :</strong> Application mobile TUYA</li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px;">
-                    <p style="font-size: 1.1rem; color: #666; margin-bottom: 10px;"><i class="fas fa-bath"></i> <strong>Baignoire :</strong> Dimensions 1500x770x610mm | Volume 510L | Poids 138kg | Acier 316SS</p>
-                    <p style="font-size: 1.1rem; color: #666;"><i class="fas fa-snowflake"></i> <strong>Chiller :</strong> Poids 40.1kg | Puissance optimisée</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -1177,9 +1193,7 @@
                     <h4>Support</h4>
                     <ul>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Garantie</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">SAV</a></li>
                     </ul>
                 </div>
 
@@ -1187,9 +1201,7 @@
                     <h4>Entreprise</h4>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
-                        <li><a href="#">À propos</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Partenaires</a></li>
                     </ul>
                 </div>
             </div>
@@ -1288,56 +1300,76 @@
             const filtration = document.getElementById('filtration');
 
             if (model === 'ice') {
-                modelTitle.textContent = '';
-                minTemp.textContent = '';
-                usage.textContent = '';
-                filtration.textContent = '';
+                // Seulement mettre à jour si les éléments existent
+                if (modelTitle) modelTitle.textContent = '';
+                if (minTemp) minTemp.textContent = '';
+                if (usage) usage.textContent = '';
+                if (filtration) filtration.textContent = '';
 
-                // Mise à jour des points forts
-                document.querySelector('.key-features ul').innerHTML = `
-                    <li><i class="fas fa-thermometer-empty"></i> <strong>Température 0°C à 40°C</strong> - Formation de glace</li>
-                    <li><i class="fas fa-bolt"></i> Système de refroidissement 1.0HP haute performance</li>
-                    <li><i class="fas fa-snowflake"></i> Capacité de refroidissement 2.81kW</li>
-                    <li><i class="fas fa-filter"></i> Double filtration externe installée</li>
-                    <li><i class="fas fa-mobile-alt"></i> Contrôle via application mobile TUYA</li>
-                    <li><i class="fas fa-shield-alt"></i> Garantie 2 ans complète</li>
-                `;
+                // Mise à jour des points forts - FORCE DEPLOYMENT
+                const pointsFortsHeading = Array.from(document.querySelectorAll('h3')).find(h => h.textContent === 'Points forts');
+                if (pointsFortsHeading && pointsFortsHeading.nextElementSibling) {
+                    pointsFortsHeading.nextElementSibling.innerHTML = `
+                        <li><i class="fas fa-thermometer-empty"></i> <strong>Température 0°C à 40°C</strong> - Formation de glace</li>
+                        <li><i class="fas fa-bolt"></i> Système de refroidissement 1.0HP haute performance</li>
+                        <li><i class="fas fa-snowflake"></i> Capacité de refroidissement 2.81kW</li>
+                        <li><i class="fas fa-filter"></i> Double filtration externe installée</li>
+                        <li><i class="fas fa-mobile-alt"></i> Contrôle via application mobile TUYA</li>
+                        <li><i class="fas fa-shield-alt"></i> Garantie 2 ans complète</li>
+                    `;
+                }
 
                 // Mise à jour du prix
-                if (document.getElementById('selected-price')) {
-                    document.getElementById('selected-price').textContent = '5 499€';
-                    document.getElementById('price-info').textContent = '';
+                const selectedPriceElement = document.getElementById('selected-price');
+                const priceInfoElement = document.getElementById('price-info');
+                if (selectedPriceElement) {
+                    selectedPriceElement.textContent = '5 499€';
+                }
+                if (priceInfoElement) {
+                    priceInfoElement.textContent = '';
                 }
 
                 // Afficher les specs ICE
-                document.getElementById('ice-specs').style.display = 'block';
-                document.getElementById('premium-specs').style.display = 'none';
+                const iceSpecsElement = document.getElementById('ice-specs');
+                const premiumSpecsElement = document.getElementById('premium-specs');
+                if (iceSpecsElement) iceSpecsElement.style.display = 'block';
+                if (premiumSpecsElement) premiumSpecsElement.style.display = 'none';
 
             } else if (model === 'premium') {
-                modelTitle.textContent = '';
-                minTemp.textContent = '';
-                usage.textContent = '';
-                filtration.textContent = '';
+                // Seulement mettre à jour si les éléments existent
+                if (modelTitle) modelTitle.textContent = '';
+                if (minTemp) minTemp.textContent = '';
+                if (usage) usage.textContent = '';
+                if (filtration) filtration.textContent = '';
 
-                // Mise à jour des points forts
-                document.querySelector('.key-features ul').innerHTML = `
-                    <li><i class="fas fa-thermometer-half"></i> <strong>Température 3°C à 42°C</strong> - Chaud et froid</li>
-                    <li><i class="fas fa-bolt"></i> Disponible en 220V ou 110V selon vos besoins</li>
-                    <li><i class="fas fa-water"></i> Système auto-amorçant intégré</li>
-                    <li><i class="fas fa-filter"></i> Filtration interne avec filtre 10 pouces</li>
-                    <li><i class="fas fa-mobile-alt"></i> Contrôle via application mobile TUYA</li>
-                    <li><i class="fas fa-shield-alt"></i> Garantie 2 ans complète</li>
-                `;
+                // Mise à jour des points forts - FORCE DEPLOYMENT
+                const pointsFortsHeading = Array.from(document.querySelectorAll('h3')).find(h => h.textContent === 'Points forts');
+                if (pointsFortsHeading && pointsFortsHeading.nextElementSibling) {
+                    pointsFortsHeading.nextElementSibling.innerHTML = `
+                        <li><i class="fas fa-thermometer-half"></i> <strong>Température 3°C à 42°C</strong> - Chaud et froid</li>
+                        <li><i class="fas fa-bolt"></i> Système de refroidissement 1.5HP haute performance</li>
+                        <li><i class="fas fa-water"></i> Système auto-amorçant intégré</li>
+                        <li><i class="fas fa-filter"></i> Filtration interne avec filtre 10 pouces</li>
+                        <li><i class="fas fa-mobile-alt"></i> Contrôle via application mobile TUYA</li>
+                        <li><i class="fas fa-shield-alt"></i> Garantie 2 ans complète</li>
+                    `;
+                }
 
                 // Mise à jour du prix
-                if (document.getElementById('selected-price')) {
-                    document.getElementById('selected-price').textContent = '4 999€';
-                    document.getElementById('price-info').textContent = '';
+                const selectedPriceElement2 = document.getElementById('selected-price');
+                const priceInfoElement2 = document.getElementById('price-info');
+                if (selectedPriceElement2) {
+                    selectedPriceElement2.textContent = '4 999€';
+                }
+                if (priceInfoElement2) {
+                    priceInfoElement2.textContent = '';
                 }
 
                 // Afficher les specs PREMIUM
-                document.getElementById('ice-specs').style.display = 'none';
-                document.getElementById('premium-specs').style.display = 'block';
+                const iceSpecsElement2 = document.getElementById('ice-specs');
+                const premiumSpecsElement2 = document.getElementById('premium-specs');
+                if (iceSpecsElement2) iceSpecsElement2.style.display = 'none';
+                if (premiumSpecsElement2) premiumSpecsElement2.style.display = 'block';
             }
 
             // Mise à jour des accessoires affichés
@@ -1364,7 +1396,7 @@
                 premiumImages.style.display = 'block';
             }
 
-            infoSection.classList.add('active');
+            if (infoSection) infoSection.classList.add('active');
         }
 
         // Fonction pour ajouter le pack complet au panier
@@ -1389,8 +1421,8 @@
                     // Add as bundle type to allow quantity controls
                     const filtrationOption = {
                         id: 'option-filtration',
-                        name: 'Système de Filtration Premium (Pack)',
-                        price: 199,
+                        name: 'Élément filtrant Premium (Pack)',
+                        price: 1.5,
                         quantity: 1,
                         type: 'bundle',
                         image: filterImage
@@ -1440,6 +1472,128 @@
             if (selector) {
                 selector.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
+        }
+
+        // Fonction pour ajouter le Pack ICE au panier
+        function addPackIceToCart() {
+            // Vérifier que le système de panier est disponible
+            if (!window.glacierCart) {
+                // Initialiser le panier si nécessaire
+                window.glacierCart = window.glacierCart || {
+                    items: [],
+                    saveCart: function() {
+                        localStorage.setItem('glacierCart', JSON.stringify(this.items));
+                    },
+                    updateCartUI: function() {
+                        const cartCount = document.querySelector('.cart-count');
+                        if (cartCount) {
+                            const totalItems = this.items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                            cartCount.textContent = totalItems;
+                        }
+                    }
+                };
+            }
+
+            // Créer l'objet pack ICE
+            const packIce = {
+                id: 'pack-ice-complete',
+                name: 'Pack ICE Complet',
+                description: '1 Chiller ICE + 5 Éléments filtrants + 1 Couverture Premium',
+                price: 5600,
+                quantity: 1,
+                type: 'pack',
+                image: 'images%20site/images/Modif%20site/chiller/Chiller%20ice%20prof.png'
+            };
+
+            // Vérifier si le pack existe déjà dans le panier
+            const existingIndex = window.glacierCart.items.findIndex(i => i.id === packIce.id);
+            if (existingIndex !== -1) {
+                // Augmenter la quantité si le pack existe déjà
+                window.glacierCart.items[existingIndex].quantity = (window.glacierCart.items[existingIndex].quantity || 1) + 1;
+            } else {
+                // Ajouter le nouveau pack au panier
+                window.glacierCart.items.push(packIce);
+            }
+
+            // Sauvegarder et mettre à jour l'interface
+            window.glacierCart.saveCart();
+            window.glacierCart.updateCartUI();
+
+            // Animation du bouton
+            const button = event.target.closest('button');
+            if (button) {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check" style="margin-right: 5px;"></i> Ajouté !';
+                button.style.background = 'linear-gradient(135deg, #4CAF50, #45B049)';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                }, 1500);
+            }
+
+            // Message de confirmation discret
+            console.log('Pack ICE ajouté au panier');
+        }
+
+        // Fonction pour ajouter le Pack Premium au panier
+        function addPackPremiumToCart() {
+            // Vérifier que le système de panier est disponible
+            if (!window.glacierCart) {
+                // Initialiser le panier si nécessaire
+                window.glacierCart = window.glacierCart || {
+                    items: [],
+                    saveCart: function() {
+                        localStorage.setItem('glacierCart', JSON.stringify(this.items));
+                    },
+                    updateCartUI: function() {
+                        const cartCount = document.querySelector('.cart-count');
+                        if (cartCount) {
+                            const totalItems = this.items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+                            cartCount.textContent = totalItems;
+                        }
+                    }
+                };
+            }
+
+            // Créer l'objet pack Premium
+            const packPremium = {
+                id: 'pack-premium-complete',
+                name: 'Pack PREMIUM Complet',
+                description: '1 Chiller Premium + 5 Éléments filtrants + 1 Couverture Premium',
+                price: 5100,
+                quantity: 1,
+                type: 'pack',
+                image: 'images%20site/images/Modif%20site/chiller/Chiller%20prémium%20prof.png'
+            };
+
+            // Vérifier si le pack existe déjà dans le panier
+            const existingIndex = window.glacierCart.items.findIndex(i => i.id === packPremium.id);
+            if (existingIndex !== -1) {
+                // Augmenter la quantité si le pack existe déjà
+                window.glacierCart.items[existingIndex].quantity = (window.glacierCart.items[existingIndex].quantity || 1) + 1;
+            } else {
+                // Ajouter le nouveau pack au panier
+                window.glacierCart.items.push(packPremium);
+            }
+
+            // Sauvegarder et mettre à jour l'interface
+            window.glacierCart.saveCart();
+            window.glacierCart.updateCartUI();
+
+            // Animation du bouton
+            const button = event.target.closest('button');
+            if (button) {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check" style="margin-right: 5px;"></i> Ajouté !';
+                button.style.background = 'linear-gradient(135deg, #4CAF50, #45B049)';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+                }, 1500);
+            }
+
+            // Message de confirmation discret
+            console.log('Pack PREMIUM ajouté au panier');
         }
 
         // Carousel functionality
@@ -1602,7 +1756,7 @@
             if (filterImage) {
                 const model = window.selectedChillerModel || 'ice';
                 // Update alt text to indicate which chiller model the filter is for
-                filterImage.alt = `Système de filtration pour Chiller ${model === 'ice' ? 'ICE' : 'PREMIUM'}`;
+                filterImage.alt = `Élément filtrant pour Chiller ${model === 'ice' ? 'ICE' : 'PREMIUM'}`;
                 // Could potentially use different images if available
                 // For now, using the same image for both models
             }
@@ -1611,8 +1765,8 @@
         // Modal functionality for Options Additionnelles
         const optionDetails = {
             filter: {
-                title: 'Système de Filtration',
-                price: 299,
+                title: 'Élément filtrant',
+                price: 1.5,
                 description: 'Kit de filtration complet pour maintenir une eau propre et claire. Comprend le système de filtration avec cartouches remplaçables pour une purification optimale de l\'eau.',
                 features: [
                     'Double filtration externe',
@@ -1621,7 +1775,7 @@
                     'Cartouches remplaçables',
                     'Installation facile'
                 ],
-                imageIce: 'images site/images/Modif site/chiller/Accessoire ICE/Filtre 5 pouces ICE.png',
+                imageIce: 'images site/images/Modif site/filtre et couv/Filtre blanc.png',
                 imagePremium: 'images site/images/Modif site/filtre et couv/cartridge_filter.png'
             },
             cover: {
@@ -1638,7 +1792,7 @@
                 image: 'images site/images/Modif site/filtre et couv/IMG_couvd.jpg.png'
             },
             footrest: {
-                title: 'Repose-Pieds en Bois Premium GLACIALIS',
+                title: 'Repose-Pieds en Bois de Cèdre GLACIALIS',
                 price: 0,
                 description: 'Repose-pieds ergonomique en bois naturel premium, spécialement conçu pour votre baignoire GLACIALIS. Fabriqué avec du bois de première qualité traité pour résister à l\'humidité, il offre un confort optimal et une stabilité maximale pendant vos séances de thérapie par le froid.',
                 features: [
@@ -1966,9 +2120,10 @@
 
             // Make functions globally available
             window.initializeOptionTitles = initializeOptionTitles;
+            window.openOptionModalV3 = openOptionModalV3;
             window.closeOptionModal = closeOptionModal;
 
-            // openOptionModalV3 function removed - all accessories use existing modal functions
+            // Removed alias - all accessories now use openOptionModalV3 directly
         })();
 
         // Listen for chiller model changes to update filter image if it's visible
@@ -2027,189 +2182,274 @@
             }
         }
 
-        // Rendre le carousel existant sticky
+        // Sticky Carousel - Version améliorée avec transition fluide
         function initializeStickyCarousel() {
-            console.log('🚀 Initializing sticky carousel...');
+            console.log('🚀 Starting sticky carousel initialization...');
 
             const carousel = document.querySelector('.product-gallery');
-            const productHero = document.querySelector('.product-hero');
-
-            if (!carousel || !productHero) {
-                console.log('❌ Missing elements for sticky carousel');
+            if (!carousel) {
+                console.log('❌ Carousel element not found');
                 return;
             }
 
-            console.log('✅ Elements found, setting up sticky carousel');
+            console.log('✅ Carousel element found');
 
-            // Variables pour la gestion du sticky (globales dans cette fonction)
-            let originalPosition = null;
             let isSticky = false;
+            let isTransitioning = false;
+            let originalPosition = null;
 
-            function updateStickyCarousel() {
-                console.log('🔄 updateStickyCarousel called');
-
-                const heroBottom = productHero.offsetTop + productHero.offsetHeight;
-                const configCompleteTitle = Array.from(document.querySelectorAll('h3')).find(h =>
-                    h.textContent.trim() === 'Votre configuration complète'
-                );
-                const configCompleteTop = configCompleteTitle ? configCompleteTitle.closest('div').offsetTop : 999999;
-                const scrollY = window.scrollY;
-
-                // Sauvegarder la position originale au premier passage
-                if (originalPosition === null) {
-                    originalPosition = {
-                        top: carousel.offsetTop,
-                        left: carousel.offsetLeft,
-                        width: carousel.offsetWidth,
-                        height: carousel.offsetHeight
-                    };
-                    console.log('💾 Original position saved:', originalPosition);
-                }
-
-                // Calculer les points d'activation
-                const carouselBottom = originalPosition.top + originalPosition.height;
-                const activationPoint = carouselBottom + 100;
-                const deactivationPoint = configCompleteTop - 200;
-
-                // Debug logging
-                console.log('🎯 Sticky conditions:', {
-                    scrollY,
-                    activationPoint,
-                    deactivationPoint,
-                    condition1: scrollY > activationPoint,
-                    condition2: scrollY < deactivationPoint,
-                    shouldBeSticky: scrollY > activationPoint && scrollY < deactivationPoint,
-                    isSticky,
-                    configCompleteTitle: configCompleteTitle ? 'found' : 'not found'
-                });
-
-                // Activer le sticky quand on dépasse le carousel initial
-                // Et le désactiver quand on atteint "Votre configuration complète"
-                if (scrollY > activationPoint && scrollY < deactivationPoint) {
-                    if (!isSticky) {
-                        console.log('✅ Activating sticky mode');
-                        // Activer le mode sticky
-                        carousel.style.position = 'fixed';
-                        carousel.style.top = '100px';
-                        carousel.style.left = originalPosition.left + 'px';
-                        carousel.style.width = originalPosition.width + 'px';
-                        carousel.style.zIndex = '999';
-                        carousel.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                        carousel.style.backdropFilter = 'blur(20px)';
-                        carousel.style.webkitBackdropFilter = 'blur(20px)';
-                        carousel.style.borderRadius = '15px';
-                        carousel.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15)';
-                        carousel.style.padding = '20px';
-                        carousel.style.border = '1px solid rgba(255, 255, 255, 0.3)';
-                        carousel.style.transition = 'all 0.3s ease-in-out';
-
-                        // Créer un placeholder pour maintenir l'espace
-                        const placeholder = document.createElement('div');
-                        placeholder.id = 'carousel-placeholder';
-                        placeholder.style.height = originalPosition.height + 'px';
-                        placeholder.style.width = originalPosition.width + 'px';
-                        carousel.parentNode.insertBefore(placeholder, carousel.nextSibling);
-
-                        isSticky = true;
-                        console.log('🎉 Sticky mode activated successfully');
-                    }
-                } else {
+            function handleScroll() {
+                // Désactiver le sticky sur mobile (écrans < 768px)
+                if (window.innerWidth < 768) {
+                    // Si le sticky est actuellement actif, le désactiver
                     if (isSticky) {
-                        console.log('❌ Deactivating sticky mode');
-                        // Désactiver le mode sticky
-                        carousel.style.position = 'static';
+                        carousel.style.position = 'relative';
                         carousel.style.top = 'auto';
                         carousel.style.left = 'auto';
                         carousel.style.width = 'auto';
                         carousel.style.zIndex = 'auto';
                         carousel.style.backgroundColor = 'transparent';
                         carousel.style.backdropFilter = 'none';
-                        carousel.style.webkitBackdropFilter = 'none';
                         carousel.style.borderRadius = '0';
                         carousel.style.boxShadow = 'none';
                         carousel.style.padding = '0';
                         carousel.style.border = 'none';
+                        carousel.style.opacity = '1';
+                        carousel.style.transform = 'none';
                         carousel.style.transition = 'none';
 
-                        // Supprimer le placeholder
-                        const placeholder = document.getElementById('carousel-placeholder');
+                        // Supprimer le placeholder s'il existe
+                        const placeholder = document.getElementById('sticky-placeholder');
                         if (placeholder) {
                             placeholder.remove();
                         }
 
                         isSticky = false;
-                        console.log('🔄 Sticky mode deactivated');
+                        isTransitioning = false;
+                        console.log('📱 Sticky désactivé sur mobile');
                     }
+                    return; // Sortir de la fonction sur mobile
                 }
-            }
 
-            // Gérer le redimensionnement de la fenêtre
-            function handleResize() {
-                if (isSticky) {
-                    // Recalculer la position lors du redimensionnement
-                    const productDetails = document.querySelector('.product-details');
-                    if (productDetails) {
-                        const rect = productDetails.getBoundingClientRect();
-                        const galleryRect = carousel.getBoundingClientRect();
-                        carousel.style.left = (window.innerWidth - galleryRect.width - rect.width - 60) / 2 + 'px';
-                    }
+                const scrollY = window.scrollY;
+
+                // Sauvegarder la position originale une seule fois
+                if (!originalPosition) {
+                    const rect = carousel.getBoundingClientRect();
+                    originalPosition = {
+                        top: carousel.offsetTop,
+                        left: carousel.offsetLeft,
+                        width: carousel.offsetWidth,
+                        height: carousel.offsetHeight
+                    };
+                    console.log('📍 Original position saved:', originalPosition);
+                }
+
+                // Point de déclenchement : début du titre "Glacialis by Glacier®"
+                const titleElement = document.querySelector('h1.product-name');
+                let triggerPoint = originalPosition.top; // Fallback
+
+                if (titleElement) {
+                    triggerPoint = titleElement.offsetTop - 50; // Un peu avant le titre
+                    console.log('📍 Title element found, trigger point set to:', triggerPoint);
                 } else {
-                    // Remettre à jour la position originale
-                    originalPosition = null;
+                    console.log('⚠️ Title element not found, using fallback trigger point');
+                }
+
+                // Point de fin : bien avant "Votre configuration complète" pour un meilleur rendu
+                let endPoint = 999999; // Fallback très large
+                let transitionZone = 150; // Zone de transition pour un effet fluide
+
+                // Chercher "Votre configuration complète" comme point d'arrêt principal
+                const allH3 = document.querySelectorAll('h3');
+                for (let h3 of allH3) {
+                    if (h3.textContent.trim() === 'Votre configuration complète') {
+                        // Arrêter sticky 250px avant "Votre configuration complète"
+                        endPoint = h3.offsetTop - 250;
+                        console.log('📍 "Votre configuration complète" found, end point set to:', endPoint);
+                        break;
+                    }
+                }
+
+                // Si pas trouvé, chercher "Points forts" comme fallback
+                if (endPoint === 999999) {
+                    for (let h3 of allH3) {
+                        if (h3.textContent.trim() === 'Points forts') {
+                            endPoint = h3.offsetTop - 300;
+                            console.log('📍 Using "Points forts" as fallback, end point set to:', endPoint);
+                            break;
+                        }
+                    }
+                }
+
+                // Dernier fallback : section Points Forts (h2)
+                if (endPoint === 999999) {
+                    const allH2 = document.querySelectorAll('h2');
+                    for (let h2 of allH2) {
+                        if (h2.textContent.includes('Points Forts') || h2.textContent.includes('Points forts')) {
+                            endPoint = h2.offsetTop - 400;
+                            console.log('📍 Using section Points Forts (h2) as last fallback, end point set to:', endPoint);
+                            break;
+                        }
+                    }
+                }
+
+                console.log(`📊 Scroll: ${scrollY}, Trigger: ${triggerPoint}, End: ${endPoint}, Sticky: ${isSticky}`);
+
+                // Activer le sticky quand on est dans la zone
+                if (scrollY > triggerPoint && scrollY < endPoint - transitionZone && !isSticky) {
+                    console.log('🔥 Activating sticky mode');
+
+                    // Créer un placeholder pour éviter le jump
+                    const placeholder = document.createElement('div');
+                    placeholder.id = 'sticky-placeholder';
+                    placeholder.style.height = originalPosition.height + 'px';
+                    placeholder.style.width = '100%';
+                    carousel.parentNode.insertBefore(placeholder, carousel);
+
+                    // Appliquer le sticky avec le style premium
+                    carousel.style.position = 'fixed';
+                    carousel.style.top = '120px';
+                    carousel.style.left = '50px';
+                    carousel.style.width = originalPosition.width + 'px';
+                    carousel.style.zIndex = '1000';
+                    carousel.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    carousel.style.backdropFilter = 'blur(10px)';
+                    carousel.style.borderRadius = '20px';
+                    carousel.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.15)';
+                    carousel.style.padding = '20px';
+                    carousel.style.border = '1px solid rgba(255, 255, 255, 0.3)';
+                    carousel.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                    carousel.style.opacity = '1';
+                    carousel.style.transform = 'translateY(0)';
+
+                    isSticky = true;
+                    isTransitioning = false;
+                    console.log('✅ Sticky mode activated');
+
+                }
+                // Zone de transition : effet de glissement progressif vers le haut
+                else if (scrollY >= endPoint - transitionZone && scrollY < endPoint && isSticky && !isTransitioning) {
+                    console.log('🎨 Entering transition zone');
+
+                    // Calculer la progression dans la zone de transition (0 à 1)
+                    const progress = (scrollY - (endPoint - transitionZone)) / transitionZone;
+                    const translateY = -200 * progress; // Glisse vers le haut progressivement
+                    const opacity = 1 - (progress * 0.3); // Légère réduction d'opacité
+
+                    carousel.style.transform = `translateY(${translateY}px)`;
+                    carousel.style.opacity = opacity;
+
+                    isTransitioning = true;
+                }
+                // Désactiver complètement après la zone de transition
+                else if (scrollY >= endPoint && isSticky) {
+                    console.log('🔄 Deactivating sticky mode with smooth exit');
+
+                    // Animation de sortie fluide
+                    carousel.style.transform = 'translateY(-250px)';
+                    carousel.style.opacity = '0';
+
+                    // Après l'animation, restaurer l'état normal
+                    setTimeout(() => {
+                        carousel.style.position = 'relative';
+                        carousel.style.top = 'auto';
+                        carousel.style.left = 'auto';
+                        carousel.style.width = 'auto';
+                        carousel.style.zIndex = 'auto';
+                        carousel.style.backgroundColor = 'transparent';
+                        carousel.style.backdropFilter = 'none';
+                        carousel.style.borderRadius = '0';
+                        carousel.style.boxShadow = 'none';
+                        carousel.style.padding = '0';
+                        carousel.style.border = 'none';
+                        carousel.style.opacity = '1';
+                        carousel.style.transform = 'none';
+                        carousel.style.transition = 'none';
+
+                        // Supprimer le placeholder
+                        const placeholder = document.getElementById('sticky-placeholder');
+                        if (placeholder) {
+                            placeholder.remove();
+                        }
+                    }, 400);
+
+                    isSticky = false;
+                    isTransitioning = false;
+                    console.log('✅ Sticky mode deactivated smoothly');
+                }
+                // Réactiver si on remonte
+                else if (scrollY <= triggerPoint && isSticky) {
+                    console.log('🔄 Deactivating sticky mode (scrolled back up)');
+
+                    // Restaurer immédiatement
+                    carousel.style.position = 'relative';
+                    carousel.style.top = 'auto';
+                    carousel.style.left = 'auto';
+                    carousel.style.width = 'auto';
+                    carousel.style.zIndex = 'auto';
+                    carousel.style.backgroundColor = 'transparent';
+                    carousel.style.backdropFilter = 'none';
+                    carousel.style.borderRadius = '0';
+                    carousel.style.boxShadow = 'none';
+                    carousel.style.padding = '0';
+                    carousel.style.border = 'none';
+                    carousel.style.opacity = '1';
+                    carousel.style.transform = 'none';
+                    carousel.style.transition = 'none';
+
+                    // Supprimer le placeholder
+                    const placeholder = document.getElementById('sticky-placeholder');
+                    if (placeholder) {
+                        placeholder.remove();
+                    }
+
+                    isSticky = false;
+                    isTransitioning = false;
+                    console.log('✅ Sticky mode deactivated');
                 }
             }
 
-            // Écouter le scroll et le redimensionnement
-            console.log('🎧 Adding event listeners...');
-            window.addEventListener('scroll', updateStickyCarousel);
-            window.addEventListener('resize', handleResize);
+            // Attacher les événements
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleScroll);
 
-            // Initialiser
-            console.log('🏁 Running initial update...');
-            updateStickyCarousel();
+            // Test initial après un délai pour s'assurer que tous les éléments sont chargés
+            setTimeout(handleScroll, 200);
 
-            console.log('✅ Sticky carousel initialization complete');
+            console.log('✅ Sticky carousel initialization complete with smooth transitions');
         }
 
-        // Initialiser le sticky carousel immédiatement après la définition
-        console.log('🏁 Starting sticky carousel initialization...');
+        // Initialisation immédiate - le DOM est déjà chargé à ce stade
+        console.log('🏁 NOUVEAU: Initializing sticky carousel immediately...');
+        initializeStickyCarousel();
+    </script>
 
-        // Multiple initialization methods to ensure it works
-        function ensureInitialization() {
-            console.log('🔄 Ensuring sticky carousel initialization...');
-            if (typeof initializeStickyCarousel === 'function') {
-                initializeStickyCarousel();
-                console.log('✅ Sticky carousel initialized successfully');
-            } else {
-                console.error('❌ initializeStickyCarousel function not found');
-            }
-        }
+    <!-- Workaround: Separate sticky carousel initializer -->
+    <script>
+        // Solution de contournement pour le bug de déploiement qui tronque le script principal
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 WORKAROUND: Separate initialization script starting...');
 
-        // Method 1: Check document ready state
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', ensureInitialization);
-        } else {
-            ensureInitialization();
-        }
-
-        // Method 2: Backup with setTimeout
-        setTimeout(ensureInitialization, 100);
-
-        // Method 3: Window load event as final backup
-        window.addEventListener('load', ensureInitialization);
-
-        // Method 4: Force initialization to bypass any previous JS errors
-        setTimeout(function() {
-            console.log('🔧 Force initialization regardless of previous errors');
-            if (typeof initializeStickyCarousel === 'function') {
-                try {
+            // Attendre que tout soit chargé, puis tenter l'initialisation
+            setTimeout(function() {
+                if (typeof initializeStickyCarousel === 'function') {
+                    console.log('✅ WORKAROUND: Found initializeStickyCarousel, calling it...');
                     initializeStickyCarousel();
-                    console.log('✅ Forced sticky carousel initialization completed');
-                } catch (error) {
-                    console.error('❌ Forced initialization failed:', error);
+                } else {
+                    console.log('❌ WORKAROUND: initializeStickyCarousel function not found, retrying...');
+                    // Retry après un délai plus long
+                    setTimeout(function() {
+                        if (typeof initializeStickyCarousel === 'function') {
+                            console.log('✅ WORKAROUND RETRY: Found initializeStickyCarousel, calling it...');
+                            initializeStickyCarousel();
+                        } else {
+                            console.log('❌ WORKAROUND RETRY: Still no initializeStickyCarousel function');
+                        }
+                    }, 1000);
                 }
-            }
-        }, 2000);
+            }, 500);
+        });
     </script>
 
     <!-- Shopping Cart Script -->
